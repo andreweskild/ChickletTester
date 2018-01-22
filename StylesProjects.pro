@@ -2,4 +2,4 @@ TEMPLATE = subdirs
 
 SUBDIRS += \
     StyleViewer \
-    styleplugin
+    ChickletQML/styleplugin

@@ -35,7 +35,7 @@ MOVE          = mv -f
 TAR           = tar -cf
 COMPRESS      = gzip -9f
 DISTNAME      = StyleViewer1.0.0
-DISTDIR = /media/andreweskild/8AA2-585D/Git/ChickletQML/StylesProjects/StyleViewer/.tmp/StyleViewer1.0.0
+DISTDIR = /media/andreweskild/8AA2-585D/Git/ChickletTester/StyleViewer/.tmp/StyleViewer1.0.0
 LINK          = g++
 LFLAGS        = -Wl,-rpath,/home/andreweskild/Qt/5.10.0/gcc_64/lib -Wl,-rpath-link,/home/andreweskild/Qt/5.10.0/gcc_64/lib
 LIBS          = $(SUBLIBS) -L/home/andreweskild/Qt/5.10.0/gcc_64/lib -lQt5QuickControls2 -lQt5Quick -lQt5Gui -lQt5Qml -lQt5Network -lQt5Core -lGL -lpthread 
@@ -672,8 +672,7 @@ compiler_rcc_clean:
 	-$(DEL_FILE) qrc_qml.cpp
 qrc_qml.cpp: qml.qrc \
 		/home/andreweskild/Qt/5.10.0/gcc_64/bin/rcc \
-		main.qml \
-		../fonts/IBMPlexSans-Regular.ttf
+		main.qml
 	/home/andreweskild/Qt/5.10.0/gcc_64/bin/rcc -name qml qml.qrc -o qrc_qml.cpp
 
 compiler_moc_predefs_make_all: moc_predefs.h

@@ -10,13 +10,13 @@ int main(int argc, char *argv[])
     QGuiApplication app(argc, argv);
 
 
-    QQuickStyle::setStyle("../styleplugin");
+    QQuickStyle::setStyle("../ChickletQML/styleplugin");
 
     QFontDatabase::addApplicationFont("../fonts/IBMPlexSans-Text.ttf");
 
     app.setFont(QFont("IBM Plex Sans", 10));
     QQmlApplicationEngine engine;
-    engine.addImportPath("../");
+    engine.addImportPath("../ChickletQML/");
     engine.load(QUrl(QStringLiteral("qrc:/main.qml")));
     if (engine.rootObjects().isEmpty())
         return -1;
